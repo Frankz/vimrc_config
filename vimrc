@@ -2,6 +2,7 @@
 set encoding=utf-8 "Encoding en UTF-8
 set number " Mostrar los numeros de línea
 set backspace=indent,eol,start
+set nowrap
 syntax on " Resaltar sintaxis
 autocmd Filetype tex setl updatetime=1
 
@@ -97,6 +98,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 "nnoremap <silent> <Leader>+ :exe "resize +1 "<CR>
 "nnoremap <silent> <Leader>+ :exe "resize -1 "<CR>
+"
+" Add full file path to your existing statusline
+set laststatus=2
+set statusline+=%F
 
 set t_Co=256
 " Theme of SublimeText2
