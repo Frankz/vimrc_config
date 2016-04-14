@@ -101,7 +101,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "
 " Add full file path to your existing statusline
 set laststatus=2
-set statusline+=%F
+set statusline=%f%m%r%h%w\ (%{&ff}){%Y}[%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 
 set t_Co=256
 " Theme of SublimeText2
