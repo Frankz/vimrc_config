@@ -39,10 +39,12 @@ Plugin 'L9'
 Plugin 'vim-scripts/tinykeymap'
 "Plufin on GitHub
 Plugin 'Valloric/MatchTagAlways'
-"Plugin on GitHub
+"Plugin on GitHub for compile latex files for pdf
 Plugin 'lervag/vimtex'
-"Plugin on GitHub
+"Plugin on GitHub for preview latext files in pdf viewer
 Plugin 'xuhdev/vim-latex-live-preview'
+" Plugin on GitHub for preview Markdown files in web browser
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 
 " Git plugin not hosted on GitHub
