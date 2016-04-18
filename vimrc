@@ -46,7 +46,8 @@ Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
 " Plugin on GitHub for preview Markdown files in web browser
 Plugin 'JamshedVesuna/vim-markdown-preview'
-
+" Plugin for write tables in markdown
+" Plugin 'dhruvasagar/vim-table-mode'
 
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
@@ -104,6 +105,26 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Add full file path to your existing statusline
 set laststatus=2
 set statusline=%f%m%r%h%w\ (%{&ff}){%Y}[%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+
+" Config MarkdownPreview Plugin
+"let vim_markdown_preview_toggle=2
+"let vim_markdown_preview_browser='chromium'
+
+" Tab navigation like Firefox.
+" http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_2)
+"nnoremap <C-S-tab> :tabprevious<CR>
+"nnoremap <C-tab>   :tabnext<CR>
+"nnoremap <C-t>     :tabnew<CR>
+"inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+"inoremap <C-tab>   <Esc>:tabnext<CR>i
+"inoremap <C-t>     <Esc>:tabnew<CR>
+nnoremap <C-PageUp> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-PageUp> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
+
 
 set t_Co=256
 " Theme of SublimeText2
