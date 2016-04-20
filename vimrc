@@ -48,6 +48,9 @@ Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 " Plugin for write tables in markdown
 " Plugin 'dhruvasagar/vim-table-mode'
+" Quick refactoring, para que sea como sublimetext
+" https://github.com/terryma/vim-multiple-cursors
+
 
 " Git plugin not hosted on GitHub
 "Plugin 'git://git.wincent.com/command-t.git'
@@ -67,11 +70,11 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 call vundle#end()            " required
 filetype plugin indent on    " required
 " AGREGADO POR MI...
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-" On pressing tab, insert 4 spaces
+" show existing tab with 2 spaces width
+set tabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
+" On pressing tab, insert 2 spaces
 set expandtab
 
 " To ignore plugin indent changes, instead use:
@@ -112,18 +115,18 @@ set statusline=%f%m%r%h%w\ (%{&ff}){%Y}[%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ 
 
 " Tab navigation like Firefox.
 " http://vim.wikia.com/wiki/Mapping_keys_in_Vim_-_Tutorial_(Part_2)
-"nnoremap <C-S-tab> :tabprevious<CR>
-"nnoremap <C-tab>   :tabnext<CR>
-"nnoremap <C-t>     :tabnew<CR>
 "inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 "inoremap <C-tab>   <Esc>:tabnext<CR>i
 "inoremap <C-t>     <Esc>:tabnew<CR>
-nnoremap <C-PageUp> :tabprevious<CR>
-nnoremap <C-tab>   :tabnext<CR>
-nnoremap <C-t>     :tabnew<CR>
-inoremap <C-PageUp> <Esc>:tabprevious<CR>i
-inoremap <C-tab>   <Esc>:tabnext<CR>i
-inoremap <C-t>     <Esc>:tabnew<CR>
+nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-l> :tabnext<CR>
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-c> :tabclose<CR>
+nnoremap <C-z> :wq!<CR>
+
+"inoremap <C-PageUp> <Esc>:tabprevious<CR>i
+"inoremap <C-tab>   <Esc>:tabnext<CR>i
+"inoremap <C-t>     <Esc>:tabnew<CR>
 
 
 set t_Co=256
@@ -131,5 +134,7 @@ set t_Co=256
 "colorscheme Monokai
 "colorscheme visualstudio
 colorscheme solarized
+"colorscheme solarized_light
 "colorscheme CandyPaper 
 " colorscheme Tomorrow-Night
+
