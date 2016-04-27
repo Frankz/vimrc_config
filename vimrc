@@ -3,6 +3,12 @@ set encoding=utf-8 "Encoding en UTF-8
 set number " Mostrar los numeros de línea
 set backspace=indent,eol,start
 set nowrap
+
+" para evitar auto-indent al pegar
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
 syntax on " Resaltar sintaxis
 autocmd Filetype tex setl updatetime=1
 
@@ -50,6 +56,8 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 " Plugin 'dhruvasagar/vim-table-mode'
 " Quick refactoring, para que sea como sublimetext
 " https://github.com/terryma/vim-multiple-cursors
+" taglist, for navigation panel
+Plugin 'vim-scripts/taglist.vim'
 
 
 " Git plugin not hosted on GitHub
@@ -123,6 +131,7 @@ nnoremap <C-l> :tabnext<CR>
 nnoremap <C-t> :tabnew<CR>
 nnoremap <C-c> :tabclose<CR>
 nnoremap <C-z> :wq!<CR>
+nnoremap <C-f> :TlistToggle<CR>
 
 "inoremap <C-PageUp> <Esc>:tabprevious<CR>i
 "inoremap <C-tab>   <Esc>:tabnext<CR>i
