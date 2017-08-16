@@ -16,11 +16,12 @@ git clone https://github.com/Frankz/vimrc_config.git ~/.vim
 ````bash
 mkdir ~/.vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
+````
 
 3. Instalamos los Vundle y los demás Plugins desde bash
 
 Aparecerá el mensaje de error 
+
 ````
 Error detected while processing /yourUser/.vim/vimrc:
 line  145:
